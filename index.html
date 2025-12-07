@@ -1,18 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeabur QR Code 產生器</title>
+    <!-- 載入 Tailwind CSS (確保美觀) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 設定 Inter 字體為優先 */
+      .font-sans {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+      /* 簡易動畫 */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    </style>
   </head>
   <body>
-    <!-- 這是 React 應用程式的掛載點 (Mount Point)。 -->
-    <!-- App.jsx 裡的所有內容都會渲染到這個 id="root" 的 div 裡面。 -->
+    <!-- React 應用程式的掛載點 -->
     <div id="root"></div>
     
-    <!-- 告訴瀏覽器載入主 JavaScript 檔案 (main.jsx 或 main.ts) -->
-    <!-- Vite 會處理這個 type="module" 的指令，並載入你的 React 程式碼 -->
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- *** 關鍵修正：載入您的主程式碼 *** -->
+    <!-- 假設您的主要入口檔案是 App.jsx，請確保路徑正確 -->
+    <script type="module" src="/App.jsx"></script> 
   </body>
 </html>
